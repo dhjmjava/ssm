@@ -9,9 +9,15 @@
   
 package dh.ssm.controller;  
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import dh.ssm.entity.UserInfo;
+import dh.ssm.service.UserInfoService;
 
 /**  
  * ClassName:UserController <br/>  
@@ -25,10 +31,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController {
 	
+	@Autowired
+	private UserInfoService userInfoService;
+	
 	@RequestMapping("/hello")
 	@ResponseBody
-	public String hello(){
-		return "hello";
+	public List<UserInfo> hello(){
+		List<UserInfo> list = userInfoService.queryAll();
+		return list;
 	}
 	
 	@RequestMapping("/")

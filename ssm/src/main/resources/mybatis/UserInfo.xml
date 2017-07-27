@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dh.ssm.dao.UserInfoDao">
+    <sql id="userInfo">
+       id id ,`name` `name`,password passWord
+    </sql>
+	<select id="queryAll" resultType="dh.ssm.entity.UserInfo">
+	   select <include refid="userInfo"/> from t_user_info
+	</select>
+	
+	<delete id="delete" parameterType="long">
+	   delete from t_user_info where id = #{id}
+	</delete>
+
+	<insert id="save" parameterType="dh.ssm.entity.UserInfo">
+	   insert into t_user_info(`name`,`password`) values(#{name},#{password})
+	</insert>
+	
+	<update id="update" parameterType="dh.ssm.entity.UserInfo">
+	    update t_user_info set `name`=#{name} where id=#{id}
+	</update>
+</mapper>  

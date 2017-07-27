@@ -8,6 +8,16 @@
 */  
   
 package dh.ssm.service.impl;  
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import dh.ssm.dao.UserInfoDao;
+import dh.ssm.entity.UserInfo;
+import dh.ssm.service.UserInfoService;
+
 /**  
  * ClassName:U <br/>  
  * Function: TODO ADD FUNCTION. <br/>  
@@ -17,7 +27,18 @@ package dh.ssm.service.impl;
  * @since    JDK 1.7
  * @see        
  */
-public class UserInfoServiceImpl {
+@Service
+public class UserInfoServiceImpl implements UserInfoService{
+
+	@Autowired
+	private UserInfoDao userInfoDao;
+	
+	@Override
+	public List<UserInfo> queryAll() {
+		  
+		return userInfoDao.queryAll();
+		
+	}
 
 }
   

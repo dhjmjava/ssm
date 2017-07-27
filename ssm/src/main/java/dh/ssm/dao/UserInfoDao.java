@@ -8,6 +8,9 @@
 */  
   
 package dh.ssm.dao;  
+
+import dh.ssm.entity.UserInfo;
+
 /**  
  * ClassName:UserInfoDao <br/>  
  * Function: TODO ADD FUNCTION. <br/>  
@@ -17,7 +20,7 @@ package dh.ssm.dao;
  * @since    JDK 1.7
  * @see        
  */
-public interface UserInfoDao {
+public interface UserInfoDao extends BaseDao<UserInfo>{
 
 }
   
