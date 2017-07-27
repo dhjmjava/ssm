@@ -115,7 +115,14 @@
             <groupId>commons-dbcp</groupId>    
             <artifactId>commons-dbcp</artifactId>    
             <version>1.4</version>    
-        </dependency>    
+        </dependency>
+        
+        <!-- druid -->
+	    <dependency>  
+	        <groupId>com.alibaba</groupId>  
+	        <artifactId>druid</artifactId>  
+	        <version>1.0.7</version>  
+	    </dependency>    
         <!-- jstl标签类 -->    
         <dependency>    
             <groupId>jstl</groupId>    
