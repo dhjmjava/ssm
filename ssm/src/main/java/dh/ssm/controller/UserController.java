@@ -25,10 +25,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController {
 	
-	@RequestMapping("/")
+	@RequestMapping("/hello")
 	@ResponseBody
 	public String hello(){
 		return "hello";
+	}
+	
+	@RequestMapping("/")
+	@ResponseBody
+	public String index(){
+		return "hellohello";
 	}
 
 }
