@@ -9,7 +9,7 @@
   
 package dh.ssm.dao;  
 
-import dh.ssm.entity.UserInfo;
+import dh.ssm.entity.SysUser;
 
 /**  
  * ClassName:UserInfoDao <br/>  
@@ -20,7 +20,9 @@ import dh.ssm.entity.UserInfo;
  * @since    JDK 1.7
  * @see        
  */
-public interface UserInfoDao extends BaseDao<UserInfo>{
+public interface SysUserDao extends BaseDao<SysUser>{
+	
+	SysUser findByUsername(String userName);
 
 }
   

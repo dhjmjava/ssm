@@ -32,7 +32,6 @@ public class SysUser implements Serializable{
 	private String name;
 	private String passWord;
 	private String userName;
-	private String salt;
 	private Boolean state;
 	private long createTime;
 	private String creatorGuid;
@@ -67,10 +66,7 @@ public class SysUser implements Serializable{
 		this.userName = userName;
 	}
 	public String getSalt() {
-		return salt;
-	}
-	public void setSalt(String salt) {
-		this.salt = salt;
+		return this.userName;
 	}
 	public Boolean getState() {
 		return state;

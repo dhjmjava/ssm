@@ -9,7 +9,8 @@
   
 package dh.ssm.service;  
 
-import dh.ssm.entity.UserInfo;
+import dh.ssm.dao.SysUserDao;
+import dh.ssm.entity.SysUser;
 
 /**  
  * ClassName:UserInfoService <br/>  
@@ -20,7 +21,9 @@ import dh.ssm.entity.UserInfo;
  * @since    JDK 1.7
  * @see        
  */
-public interface UserInfoService extends BaseService<UserInfo>{
+public interface SysUserService extends BaseService<SysUser>{
+	
+	SysUser findByUsername(String userName);
 
 }
   

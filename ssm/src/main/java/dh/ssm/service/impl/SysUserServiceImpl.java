@@ -14,9 +14,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import dh.ssm.dao.UserInfoDao;
-import dh.ssm.entity.UserInfo;
-import dh.ssm.service.UserInfoService;
+import dh.ssm.dao.SysUserDao;
+import dh.ssm.entity.SysUser;
+import dh.ssm.service.SysUserService;
 
 /**  
  * ClassName:U <br/>  
@@ -28,16 +28,19 @@ import dh.ssm.service.UserInfoService;
  * @see        
  */
 @Service
-public class UserInfoServiceImpl implements UserInfoService{
+public class SysUserServiceImpl implements SysUserService{
 
 	@Autowired
-	private UserInfoDao userInfoDao;
+	private SysUserDao sysUserDao;
 	
 	@Override
-	public List<UserInfo> queryAll() {
-		  
-		return userInfoDao.queryAll();
-		
+	public List<SysUser> queryAll() {
+		return sysUserDao.queryAll();
+	}
+
+	@Override
+	public SysUser findByUsername(String userName) {
+		return sysUserDao.findByUsername(userName);
 	}
 
 }
